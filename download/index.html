@@ -60,7 +60,7 @@ body {
 <body class="downbg">
 <form name="frmdirect" method="post" action="#">
 <a id="direct" href="#" class="downbtn"><img src="images/1/downbtn.png"  alt=""/></a>
-<div class="banben">当前版本号：3.0.0</div>
+<div class="banben">当前版本号：1.4.1</div>
 </form>
 <div id="Loadinfo" class="divpop" style="display:none;">
 <img id="loadimg" src="http://3g.cib.com.cn/userfiles/image/home/wxinfo2.gif" style="width:100%;"/></div>
@@ -74,12 +74,12 @@ JQ(document).ready(function()
 		var ua = window.navigator.userAgent.toLowerCase();
 		if (ua.match(/MicroMessenger/i)=="micromessenger")
 		{
-			frmdirect.action="http://a.app.qq.com/o/simple.jsp?pkgname=com.cib.cibmb";
+			frmdirect.action="http://a.app.qq.com/o/simple.jsp?pkgname=com.laocaixw.anfualbum";
 			frmdirect.submit();
 		}
 		else
 		{
-			frmdirect.action="http://m.cib.com.cn/dl/cib?target=android/android1.5/";
+			frmdirect.action="https://anfualbum.github.io/apk/anfuAlbum-1.4.1.apk";
 			frmdirect.submit();
 		}
 		
