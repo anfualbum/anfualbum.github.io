@@ -8,27 +8,23 @@ html {
 	width: 100%;
 	height: 100%
 }
-
 body {
 	width: 100%;
 	padding: 0;
 	margin: 0;
 	background: #f1f0f5;
 }
-
 .downbg{
 	background: url(images/1/dbg.png) repeat-x #edf2f5;
 	background-size: 320px 504px,2px 504px;
 	position:relative;
 }
-.downbtn{
+.anfuicon{
 	position:absolute;
-	top:370px;
+	top:150px;
 	left:50%;
+	width: 200px;
 	margin-left: -60px;
-}
-.downbtn img{
-	width: 125px;
 }
 .kehuduan{
 	width:200px;
@@ -40,13 +36,22 @@ body {
 	left:50%;
 	margin-left: -100px;
 }
+.downbtn{
+	position:absolute;
+	top:370px;
+	left:50%;
+	margin-left: -60px;
+}
+.downbtn img{
+	width: 125px;
+}
 .banben{
 	width:200px;
 	text-align: center;
 	color:#C3D1DD;
 	font-size: 14px;
 	position:absolute;
-	top:415px;
+	top:420px;
 	left:50%;
 	margin-left: -100px;
 }
@@ -55,12 +60,13 @@ body {
 <meta charset="utf-8">
 <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
 <title>安福相册</title>
-<link rel="icon" href="https://raw.githubusercontent.com/anfualbum/anfualbum.github.io/master/img/anfu.png">
+<link rel="icon" href="https://anfualbum/anfualbum.github.io/master/img/anfu.png">
 </head>
 <body class="downbg">
 <form name="frmdirect" method="post" action="#">
-<a id="direct" href="#" class="downbtn"><img src="images/1/downbtn.png"  alt=""/></a>
+<img class="anfuicon" src="https://anfualbum/anfualbum.github.io/master/img/anfu.png" alt=""/>
 <div class="kehuduan">安福相册客户端</div>
+<a id="direct" href="#" class="downbtn"><img src="images/1/downbtn.png" alt=""/></a>
 <div class="banben">当前版本号：1.4.1</div>
 </form>
 
