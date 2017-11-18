@@ -1,96 +1,100 @@
 <!doctype html>
 <html>
-<script src="js/jquery.min.js"></script> 
+<script src="js/jquery.min.js"></script>
 <script src="js/amazeui.min.js"></script>
 <style type="text/css">
 @charset "utf-8";
 html {
-	width: 100%;
-	height: 100%
+    width: 100%;
+    height: 100%
 }
+
 body {
-	width: 100%;
-	padding: 0;
-	margin: 0;
-	background: #f1f0f5;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background: #f1f0f5;
 }
-.downbg{
-	background: url(images/1/dbg.png) repeat-x #edf2f5;
-	background-size: 320px 504px,2px 504px;
-	position:relative;
+
+.downbg {
+    background: url(images/1/dbg.png) repeat-x #edf2f5;
+    background-size: 320px 504px, 2px 504px;
+    position: relative;
 }
-.anfuicon{
-	position:absolute;
-	top:50px;
-	left:50%;
-	width: 200px;
-	margin-left: -100px;
+
+.anfuicon {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    width: 200px;
+    margin-left: -100px;
 }
-.kehuduan{
-	width:200px;
-	text-align: center;
-	color:#C3D1DD;
-	font-size: 18px;
-	position:absolute;
-	top:330px;
-	left:50%;
-	margin-left: -100px;
+
+.kehuduan {
+    width: 200px;
+    text-align: center;
+    color: #C3D1DD;
+    font-size: 18px;
+    position: absolute;
+    top: 330px;
+    left: 50%;
+    margin-left: -100px;
 }
-.downbtn{
-	position:absolute;
-	top:370px;
-	left:50%;
-	margin-left: -60px;
+
+.downbtn {
+    position: absolute;
+    top: 370px;
+    left: 50%;
+    margin-left: -60px;
 }
-.downbtn img{
-	width: 125px;
+
+.downbtn img {
+    width: 125px;
 }
-.banben{
-	width:200px;
-	text-align: center;
-	color:#C3D1DD;
-	font-size: 14px;
-	position:absolute;
-	top:420px;
-	left:50%;
-	margin-left: -100px;
+
+.banben {
+    width: 200px;
+    text-align: center;
+    color: #C3D1DD;
+    font-size: 14px;
+    position: absolute;
+    top: 420px;
+    left: 50%;
+    margin-left: -100px;
 }
 </style>
-<head>
-<meta charset="utf-8">
-<meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
-<title>安福相册</title>
-<link rel="icon" href="https://anfualbum.github.io/img/anfu.png">
-</head>
-<body class="downbg">
-<form name="frmdirect" method="post" action="#">
-<img class="anfuicon" src="https://anfualbum.github.io/img/anfu.png" alt=""/>
-<div class="kehuduan">安福相册客户端</div>
-<a id="direct" href="#" class="downbtn"><img src="images/1/downbtn.png" alt=""/></a>
-<div class="banben">当前版本号：1.4.2</div>
-</form>
 
-<script language="javascript">
-var JQ = jQuery.noConflict();
-JQ(document).ready(function()
-{
-	JQ('#direct').on('click',function(){
-		var ua = window.navigator.userAgent.toLowerCase();
-		if (ua.match(/MicroMessenger/i)=="micromessenger")
-		{
-			frmdirect.action="http://a.app.qq.com/o/simple.jsp?pkgname=com.laocaixw.anfualbum";
-			frmdirect.method="post";
-			frmdirect.submit();
-		}
-		else
-		{
-			frmdirect.action="https://anfualbum.github.io/apk/anfuAlbum-1.4.2.apk";
-			frmdirect.method="get";
-			frmdirect.submit();
-		}
-		
-	});	
-});
-</script>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+    <title>安福相册</title>
+    <link rel="icon" href="https://anfualbum.github.io/img/anfu.png">
+</head>
+
+<body class="downbg">
+    <form name="frmdirect" method="post" action="#">
+        <img class="anfuicon" src="https://anfualbum.github.io/img/anfu.png" alt="" />
+        <div class="kehuduan">安福相册客户端</div>
+        <a id="direct" href="#" class="downbtn"><img src="images/1/downbtn.png" alt=""/></a>
+        <div class="banben">当前版本号：1.4.2</div>
+    </form>
+    <script language="javascript">
+    var JQ = jQuery.noConflict();
+    JQ(document).ready(function() {
+        JQ('#direct').on('click', function() {
+            var ua = window.navigator.userAgent.toLowerCase();
+            if (ua.match(/MicroMessenger/i) == "micromessenger") {
+                frmdirect.action = "http://a.app.qq.com/o/simple.jsp?pkgname=com.laocaixw.anfualbum";
+                frmdirect.method = "post";
+                frmdirect.submit();
+            } else {
+                frmdirect.action = "https://github.com/anfualbum/anfualbum.github.io/releases/download/1.4.2/anfuAlbum-1.4.2.apk";
+                frmdirect.method = "get";
+                frmdirect.submit();
+            }
+        });
+    });
+    </script>
 </body>
+
 </html>
